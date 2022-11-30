@@ -1,51 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/fontawesome.css"> 
+    <link rel="stylesheet" href="../css/style.css">
+    <title>NHL Now</title>
 
     <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.14.0/firebase-app-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-app-compat.js"></script>
     <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.14.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-performance-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-performance-compat.js"></script>
     <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+       <a style="padding-left:1.0rem" class="navbar-brand">NHL Now</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/create">Create</a>
+      </li>
+    </ul>
+    <div class="navbar-nav ms-auto">
+          <a style="padding-right:1.2rem"class="nav-link" href="/login">Login </a>
+      </div>
+  </div>
+</nav>
+    <!-- TODO: Make a logo -->
+    <div class="about-section">
+        <h1>Welcome to NHL Now</h1>
+        <p>"<i>Utilizes an API</i>"</p>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+
+    <div class="slide" style="background-color:rgb(225, 236, 236)">
+      <div class="row" style="padding-left:10vmin; padding-top:10vmin;">
+        <div class="col-sm" style="padding-top:30vmin;">
+          <h2>Putting the forum back into the people's hands.</h2>
+          <p>NHL Now is a free secure website designed to show you all the most up-to-date information regarding the NHL <a href="">here</a>
+        </div>
+        <!-- Credit: Daniel Lucero-->
+        <div class="col-sm">
+          <img src="https://daniellucero.com/wp-content/uploads/2022/08/d3464a4351fdf340ccb6bb37c281381a.gif">
+        </div>
+      </div>
+    </div>
+
+    <div class="slide" style="background-color:rgb(156, 178, 226)">
+      <div class="row" style="padding-left:20vmin; padding-top:10vmin;">
+        <div class="col-sm">
+          <h1>How to Get Started.</h1>
+          <ol>
+            <li style="font-size:x-large">Create an account by clicking <a href="/login">sign up</a>.</li>
+            <li style="font-size:x-large">Sign in, and click the "New Post" button.</li>
+            <li style="font-size:x-large">Post!</li>
+          </ol>
+          <p>Share your thoughts with the rest of the world! <sub>(or at the very least, this community)</sub></p>
+        </div>
+        <div class="col-sm">
+          <h1>Testimonials</h1>
+          <ul>
+            <li style="font-size:x-large">"I can't post yet, why is this here" --Ryan</li>
+            <li style="font-size:x-large">"Firebase is hard" --Max Lewis</li>
+            <li style="font-size:x-large">"We might need to put this on Azure" --Team Fun</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="row" style="padding-left:20vmin; padding-top:10vmin;">
+        <div class="col-sm" style="padding-left:10vmin;padding-top:10vmin;">
+          <!-- <img src="https://i.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.webp"> -->
+          <img src="../img/NHL Nowlogo-full.svg">
+        </div>
+        <div class="col-sm" style="padding-left:10vmin;padding-top:20vmin;">
+          <h2>Find us on GitHub.</h2>
+          <a href="https://github.com/software-engineering-team-fun/blog-project"><img src="../img/iconmonstr-github-1.svg" style="width:25%"></a>
+          <h2>Or learn more about us <a href="about.html">here</a></h2>
+        </div>
+      </div>
+    </div>
+
+
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {

@@ -1,3 +1,6 @@
-# Node.js and Express Hosted on Microsoft Azure Template
-This repository serves as a template that can be used to create a Node.js and Express based website that can easily
-be hosted on Microsoft Azure.
+# NHL Now Website
+A website to designed with authentication and NHL API to show information
+regarding the NHL.
+
+Link to website:
+https://nhl-stats-website.firebaseapp.com/
