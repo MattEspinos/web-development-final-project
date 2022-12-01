@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/fontawesome.css"> 
+    <link rel="stylesheet" href="../css/style.css">
+    <title>NHL Now</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.12.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.12.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+       <a style="padding-left:1.0rem" class="navbar-brand">NHL Now</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+    </ul>
+    <div class="navbar-nav ms-auto">
+          <a style="padding-right:1.2rem"class="nav-link" href="/login">Login </a>
+      </div>
+  </div>
+</nav>
+    <!-- TODO: Make a logo -->
+    <div class="about-section">
+        <h1>Welcome to NHL Now</h1>
+    </div>
+
+    <div class="slide" style="background-color:#ffffff">
+      <div class="row" style="padding-left:10vmin; padding-top:10vmin;">
+        <div class="col-sm" style="padding-top:30vmin;">
+          <h2>What is NHL now?</h2>
+          <p>NHL Now is a free secure website hosted with firebase designed to show you all the most up-to-date information regarding the NHL <a href="">here</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide" style="background-color:rgb(118, 214, 226)">
+      <div class="row" style="padding-left:20vmin; padding-top:10vmin;">
+        <div class="col-sm">
+          <h1>How to Get Started.</h1>
+          <ol>
+            <li style="font-size:x-large">Create an account by clicking <a href="/login">sign up</a>.</li>
+            <li style="font-size:x-large">Sign in, with your email and password.</li>
+            <li style="font-size:x-large">Look at the stats!</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

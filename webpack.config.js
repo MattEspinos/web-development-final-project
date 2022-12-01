@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
     mode: 'development',
-    entry: './index.js',
+    entry: './firebase.js',
     output: {
         path: path.resolve(__dirname, 'public/js'),
         filename: 'bundle.js'
@@ -11,7 +11,7 @@ module.exports = {
         rules: [
             {
                 test: /\.s?[ac]ss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader'],
+                use: ['style-loader', 'css-loade+r', 'sass-loader'],
                 exclude: [/node_modules/],
               },
         ],
