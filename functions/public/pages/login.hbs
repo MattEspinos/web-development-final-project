@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="css/login.css">
+    <link type="text/css" rel="stylesheet" href="css/fontawesome.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js" defer ></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js" defer ></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js" defer ></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+       <a style="padding-left:1.0rem" class="navbar-brand">NHL Now</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/home">Home</a>
+      </li>
+    </ul>
+    <div class="navbar-nav ms-auto">
+          <a style="padding-right:1.2rem"class="nav-link" href="/login">Login </a>
+      </div>
+  </div>
+</nav>
+    <div class="container text-center">
+      <div class="row ">
+          <div class="col-md-6 mx-auto">
+            <div class="card card-body bg-light mt-5">
+              <h2>Login</h2>
+
+              <form id="loginForm">
+                <div class="form-group">
+                  <label for="email">Email: <sup>*</sup></label>
+                    <input id="loginEmail" type="email" name="loginEmail" class="form-control form-control-lg">
+                </div>
+                <div class=" form-group">
+                  <label for="password">Password: <sup>*</sup></label>
+              <input id="loginPassword" name="loginPassword" class="form-control form-control-lg" type="password">
+            </div>
+
+            <div class=" row">
+            <div style ="padding-top:1.2rem" class="col">
+              <button id="btnLogin" style = "background-color: #474e5d" value="btnLogin" class="btn btn-primary btn-block" type="button">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+      <div class="col-md-6 mx-auto">
+      <div class="card card-body bg-light mt-5">
+        <h2>Create An Account</h2>
+        
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="email">Email: <sup>*</sup></label>
+                <input type="email" name="signupEmail" class="form-control form-control-lg" id="signupEmail">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password: <sup>*</sup></label>
+                <input type="password" name="signupPassword" class="form-control form-control-lg" id="signupPassword">
+                <span class="invalid-feedback"></span>
+            </div>
+
+            <div class=" row">
+            <div style ="padding-top:1.2rem" class="col">
+              <button id="btnSignup" style = "background-color: #474e5d" value="btnSignup" class="btn btn-primary btn-block" type="button">Sign Up</button>
+            </div>
+          </div>
+          </form>
+          </div>
+      </div>
+  </body>
+  <script src="/bundle.js"></script>
+</html>

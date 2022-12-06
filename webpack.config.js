@@ -4,7 +4,7 @@ module.exports = {
     mode: 'development',
     entry: './firebase.js',
     output: {
-        path: path.resolve(__dirname, 'public/js'),
+        path: path.resolve(__dirname, 'functions'),
         filename: 'bundle.js'
     },
     module: {
