@@ -30,7 +30,7 @@ const loginEmailPasword = async () => {
     const userCredentials = await signInWithEmailAndPassword(auth, accountEmail, accountPassword);
     console.log(userCredentials.user);
     console.log("LOGIN SUCESSFUL");
-    window.location.replace('/test');
+    window.location.replace('/feed');
   }
   catch(error){
     console.log(error);
@@ -50,7 +50,7 @@ const createAccount = async () => {
     const userCredentials = await createUserWithEmailAndPassword(auth, accountEmail, accountPassword);
     console.log(userCredentials.user);
     console.log("ACCOUNT CREATED");
-    window.location.replace('/test');
+    window.location.replace('/feed');
   }
   catch(error){
     console.log(error);
@@ -70,7 +70,7 @@ const monitorAuthState = async () => {
     }
     else{
       console.log("Not signed in");
-      if(window.location.pathname == "/test"){
+      if(window.location.pathname == "/feed"){
         window.location.replace('/login');
       }
     }
