@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth, connectAuthEmulator, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut} from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut} from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -18,9 +18,6 @@ const analytics = getAnalytics(app);
 
 //Initialize Authentication Login
 const auth = getAuth();
-
-//Local Testing
-//connectAuthEmulator(auth, "http://localhost:9099");
 
 const loginEmailPasword = async () => {
   const accountEmail = loginEmail.value;
@@ -67,6 +64,10 @@ const monitorAuthState = async () => {
   onAuthStateChanged(auth, user => {
     if(user) {
       console.log(user);
+      if(window.location.pathname != '/login'){
+        document.getElementById('loginNav').innerHTML = `<a style="padding-right:1.2rem"class="nav-link" href="" id="loginNav">Logout </a>`;
+        document.getElementById('loginNav').addEventListener('click', logout);
+      }
     }
     else{
       console.log("Not signed in");
@@ -82,7 +83,4 @@ monitorAuthState();
 const logout = async () => {
   await signOut(auth);
   window.location.replace('/login');
-}
-if(window.location.pathname == "/test" || window.location.pathname == "/feed"){
-  btnSignout.addEventListener("click", logout);
 }
